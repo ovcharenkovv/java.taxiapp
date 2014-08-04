@@ -6,7 +6,7 @@
 <h:head></h:head>
 <h:body>
     <h:form>
-        <h:outputLabel for="#{createDriverBean.driver.firstName}" value="First name:"/>
+        <h:outputLabel for="#{createDriverBean.driver.firstName}" value="First name:" />
         <p:inputText value="#{createDriverBean.driver.firstName}"/>
         <br/>
         <h:outputLabel for="#{createDriverBean.driver.lastName}" value="Last name:"/>
@@ -15,15 +15,14 @@
         <h:outputLabel for="#{createDriverBean.driver.autoPlate}" value="Auto plate:"/>
         <p:inputText value="#{createDriverBean.driver.autoPlate}"/>
         <br/>
-        <h:outputLabel for="#{createDriverBean.driver.brand}" value="Brand:"/>
-        <p:inputText value="#{createDriverBean.driver.brand}"/>
-        <br/>
         <h:outputLabel for="#{createDriverBean.driver.model}" value="Model:"/>
         <p:inputText value="#{createDriverBean.driver.model}"/>
-
-
-
-
+        <br/>
+        <p:outputLabel for="brand" value="Brand:" />
+        <p:selectOneMenu id="brand" value="#{createDriverBean.driver.brand}">
+            <f:selectItem itemLabel="Select One" itemValue="" />
+            <f:selectItems value="#{createDriverBean.brands}" />
+        </p:selectOneMenu>
         <br/>
         <p:commandButton type="submit" value="Add" action="#{createDriverBean.create}" />
     </h:form>
