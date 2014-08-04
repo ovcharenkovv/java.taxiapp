@@ -26,5 +26,19 @@
         <br/>
         <p:commandButton type="submit" value="Add" action="#{createDriverBean.create}" />
     </h:form>
+
+
+    <br/>
+    <br/>
+    <br/>
+
+    <h:form>
+        <h:outputLabel for="#{createOrderBean.order.from}" value="From:" />
+        <p:inputText value="#{createOrderBean.order.from}"/>
+        <br/>
+        <p:commandButton type="submit" value="Add" action="#{createOrderBean.create}" />
+    </h:form>
+
+
 </h:body>
 </html>

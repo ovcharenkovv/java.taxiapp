@@ -34,7 +34,7 @@ public class CreateDriverBean {
     }
 
     public String create() {
-        return "view";
+        return "viewDriver";
     }
 
     public Map<String, String> getBrands() {
