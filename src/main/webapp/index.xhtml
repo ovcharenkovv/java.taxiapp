@@ -5,6 +5,7 @@
         >
 <h:head></h:head>
 <h:body>
+    <h1> Create new Driver</h1>
     <h:form>
         <h:outputLabel for="#{createDriverBean.driver.firstName}" value="First name:" />
         <p:inputText value="#{createDriverBean.driver.firstName}"/>
@@ -32,9 +33,14 @@
     <br/>
     <br/>
 
+    <h1> Create new Order</h1>
+
     <h:form>
         <h:outputLabel for="#{createOrderBean.order.from}" value="From:" />
         <p:inputText value="#{createOrderBean.order.from}"/>
+        <br/>
+        <h:outputLabel for="#{createOrderBean.order.status}" value="status:" />
+        <p:inputText value="#{createOrderBean.order.status}"/>
         <br/>
         <p:commandButton type="submit" value="Add" action="#{createOrderBean.create}" />
     </h:form>
